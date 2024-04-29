@@ -1,0 +1,151 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	url:()
+}
+header{
+	background-color: #252a28;
+	height: 100px;
+}
+img#Logo{
+	float:left;
+	width:150px;
+	height:110px;
+	padding-left:50px;
+}
+
+.listContainer{
+	position:relative;
+	right:20%;
+	left:20%;
+}
+#headerList{
+	padding-top:20px;
+	text-align: center;
+	padding-right:100px;
+	padding-right:100px;
+	
+}
+#headerListPoints{
+	float: left;
+	display: inline;
+	margin:10px;
+	padding-right:20px;
+	font-size:30px;
+	font-family: "Gentona ExtraBold";
+	color: white;
+	
+	
+}
+.rightBorder{
+	border-right-style:solid;
+	border-right-width:2px;
+}
+
+#LogIn{
+	width: 15px;
+	color:white;
+	font-size:30px;
+	padding-right:30px;
+	font-family:"Gentona ExtraBold";
+	 
+}
+#SignUp{
+	width: 15px;
+	margin: 5px;
+	border-radius:10px;
+	padding: 8px 17px 8px 17px;
+	background-color: #cf0564;
+	font-size: 30px;
+	color:white;
+	font-family:"Gentona ExtraBold";
+	
+}
+#LogTab{
+    float: right;
+	padding-top:10px;
+	padding-right:50px;
+}
+
+footer{
+	height:500px;
+	background-color:  #252a28;
+}
+
+img#fLogo{
+	width: 400px;
+	height: 320px;
+	padding-left:0px;
+}
+
+.BoxContainer{
+	display:flex;
+	flex-direction:row;
+}
+
+.FBoxes{
+	padding: 25px;
+}
+
+#fLists{
+	list-style-type: none;
+	padding: 4px;
+}
+
+div.FBoxes>span
+{
+	
+	font-size:40px;
+	color: white;
+	text-decoration:underline;
+	font-family:"Gentona ExtraBold";
+}
+
+ul.Ful{
+	padding-top:20px;
+	font-size: 35px;
+	color: white;
+	font-family:"Gentona ExtraBold";
+}
+#follow{
+	color:white;
+    font-family:"Gentona ExtraBold";
+	font-size:40px;
+	float:left;
+	padding-left:110px;
+	margin-right:15px;
+}
+
+
+div#SM>img{
+	float:left;
+	width:50px;
+	height:50px;
+	padding:10px;
+}
+
+
+div#lic{
+	float:right;
+	padding-right:100px;
+}
+
+div#lic>ul>li{
+	display:inline;
+	list-style-type:none;
+	margin:10px;
+	padding-right:5px;
+	font-size:30px;
+	font-family: "Gentona ExtraBold";
+	color: white;
+}
+
+span#MetaCopy{
+	font-size:30px;
+	color: white;
+	font-family: "Mont","Gentona ExtraBold";
+	position:relative;
+	right:20%;
+	left:30%;
+}
+
