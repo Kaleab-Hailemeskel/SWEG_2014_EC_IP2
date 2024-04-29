@@ -1,0 +1,106 @@
+*{
+	padding: 0px;
+	margin: 0px;
+
+}
+.Content-image {
+    margin: 0;
+            padding: 0;
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+}
+       .Content {
+    margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            align-items: center;
+}
+        .rounded-box
+        {
+            width: 280px;
+            height: 340px;
+            margin: 30px; 
+            border-radius: 20px; 
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+
+        }
+ .box img
+         {  margin: 10px; 
+            width: 100%;
+            height: 100%; 
+            object-fit: cover;
+ 
+        }
+
+        .rounded-box img
+         {
+            width: 100%;
+            height: 50%; 
+            object-fit: cover; 
+        }
+
+        .button-container {
+            width: 100%;
+            height: 100%;
+            
+            text-align: center;
+            padding-top: 20px; 
+            background-color: #242424;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .button-container button {
+            font-size: 15px;
+            font-family:Campfire;
+            border: none;
+            border-radius: 15px;
+            background-color: #d8114a; 
+            color: white; 
+            cursor: pointer;
+            
+            height: 30px;
+            width: 70%;
+            
+            margin: 0 auto; 
+        }
+
+        .text-below-button {
+            color: white; 
+            text-align: center;
+            font-size: 15px;
+            padding-bottom:28px;
+            font-family:FreeSans;
+        }
+
+.btn-course:hover{
+    color: #930b32;
+    border: #930b32 solid 1px;
+    background:#ffffff;
+}
+
+@font-face{
+  font-family: "FreeSans";
+  src:url("Fonts/FreeSansBold.ttf");
+}
+
+@font-face{
+  font-family: "Campfire";
+  src:url("Fonts/Campfire.ttf");
+}
+
+a#courseLinks{
+text-decoration:none;}
+
+#prac{
+	margin-top:-55px;
+}

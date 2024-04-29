@@ -1,0 +1,115 @@
+*{
+	padding: 0px;
+	margin: 0px;
+
+}
+
+@font-face{
+  font-family: "FreeSans";
+  src:url("../font/FreeSansBold.ttf");
+}
+
+@font-face{
+  font-family: "Campfire";
+  src:url("../font/Campfire.ttf");
+}
+
+@font-face{
+	font-family: "Gentona ExtraBold";
+	src:url("../font/Gentona ExtraBold.otf")
+}
+
+h1{
+	text-align:center;
+	font-family:"Campfire";
+	color:white;
+	font-size:50px;
+	padding-bottom:20px;
+}
+label{
+	font-family:"Gentona ExtraBold";
+	color:white;
+	font-size:25px;
+	padding-right:3px;
+}
+
+
+input[type="text"] {
+	font-family:"FreeSans";
+	height:25px;
+	padding: 2px;
+	border-radius:15px;
+	
+}
+span#number{
+	color:white;
+	font-family:"Gentona ExtraBold";
+	padding-right:2px;
+	font-size:25px;
+}
+.choices{
+	display:flex;
+	justify-content:space-between;
+	padding-bottom:15px;
+}
+
+button{
+	font-family:"FreeSans";
+	width: 120px;
+	height:40px;
+	border-radius:50px;
+	font-size:16px;
+	color:white;
+	background-color: #d8114a;
+	
+}
+
+button:hover{
+	color: #930b32;
+  border: #930b32 solid 1px;
+  background: #ffffff;
+  box-shadow: 0 0 20px #bb0c3d;
+  cursor:pointer;
+	
+}
+
+.total {
+	background-color:black;
+	display:flex;
+	flex-direction: column;
+	width:1200px;
+	align-items:center;
+	padding-bottom:20px;
+	margin-top:50px;
+	margin-bottom:50px;
+	height:400px;
+	padding-top:150px;
+	margin-left:40px;
+	margin-right:20px;
+	
+}
+button#final{
+	width: 160px;
+	height:50px;
+	border-radius:50px;
+	font-size:20px;
+	
+}
+
+.Question{padding-bottom:15px;}
+.sub{padding-bottom:15px;}
+
+.quizDescs{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	padding-bottom:30px;
+}
+
+input#Desc{
+	width:600px;
+}
+
+h1{
+	margin-top:-40px;
+}

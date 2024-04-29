@@ -1,0 +1,421 @@
+*{
+	padding: 0px;
+	margin: 0px;
+
+}
+
+@font-face{
+  font-family: "FreeSans";
+  src:url("../font/FreeSansBold.ttf");
+}
+
+@font-face{
+  font-family: "Campfire";
+  src:url("../font/Campfire.ttf");
+}
+
+@font-face{
+	font-family: "Gentona ExtraBold";
+	src:url("../font/Gentona ExtraBold.otf")
+}
+
+header{
+	background-color: #252a28;
+	height: 100px;
+    width:100%;
+	width:100vw;
+}
+img#Logo{
+	float:left;
+	width:11%;
+	height:100%;
+	padding-left:50px;
+}
+
+.listContainer{
+	position:relative;
+	right:20%;
+	left:20%;
+}
+#headerList{
+	padding-top:20px;
+	text-align: center;
+	padding-right:100px;
+	padding-right:100px;
+	
+}
+#headerListPoints{
+	float: left;
+	display: inline;
+	margin:10px;
+	padding-right:20px;
+	font-size:125%;
+	font-family: "Gentona ExtraBold";
+	color: white;
+	
+	
+	
+}
+
+#headerListPoints:after{
+	content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#headerListPoints:hover:after{
+	width:100%;
+}
+
+
+.rightBorder{
+	border-right-style:solid;
+	border-right-width:2px;
+}
+
+#LogIn{
+	width: 15px;
+	color:white;
+	font-size:150%;
+	padding-right:30px;
+	font-family:"Gentona ExtraBold";
+	 
+}
+
+
+#SignUp{
+	width: 15px;
+	margin: 5px;
+	border-radius:10px;
+	padding: 8px 17px 8px 17px;
+	background-color: #cf0564;
+	font-size: 150%;
+	color:white;
+	font-family:"Gentona ExtraBold";
+	
+}
+#LogTab{
+    float: right;
+	padding-top:10px;
+	padding-right:50px;
+}
+
+footer{
+	height:500px;
+	background-color:  #252a28;
+	width:100%;
+	width:100vm;
+}
+
+img#fLogo{
+	width: 32%;
+	height: 25%;
+	padding-left:0px;
+}
+
+.BoxContainer{
+	display:flex;
+	flex-direction:row;
+}
+
+.FBoxes{
+	padding: 25px;
+}
+
+#fLists{
+	list-style-type: none;
+	padding: 4px;
+}
+
+div.FBoxes>span
+{
+	
+	font-size:200%;
+	color: white;
+	text-decoration:underline;
+	font-family:"Gentona ExtraBold";
+}
+
+ul.Ful{
+	padding-top:20px;
+	font-size: 130%;
+	color: white;
+	font-family:"Gentona ExtraBold";
+}
+#follow{
+	color:white;
+    font-family:"Gentona ExtraBold";
+	font-size:180%;
+	float:left;
+	padding-left:110px;
+	margin-right:15px;
+}
+
+
+div#SM>img{
+	float:left;
+	width:2.85%;
+	height:8%;
+	padding:10px;
+}
+
+
+div#lic{
+	float:right;
+	padding-right:100px;
+}
+
+div#lic>ul>li{
+	display:inline;
+	list-style-type:none;
+	margin:10px;
+	padding-right:5px;
+	font-size:115%;
+	font-family: "Gentona ExtraBold";
+	color: white;
+}
+
+span#MetaCopy{
+	font-size:115%;
+	color: white;
+	font-family:"Gentona ExtraBold";
+	position:relative;
+	right:20%;
+	left:30%;
+}
+
+html,body {
+	overflow-x:hidden;
+}
+
+body{
+	background-image: url(../img/Gradient.svg);
+	width:100%;
+	width:100vm;
+	
+}
+
+body>p#motto{
+	color:white;
+	font-family:Campfire;
+	font-size:400%;
+	text-align:center;
+	padding-bottom:30px;
+	border-bottom: solid;
+	border-bottom-color:black;
+	
+    
+}
+body>p#mottoUp{
+	padding-top:50px;
+	color:white;
+	font-family:Campfire;
+	font-size:400%;
+	text-align:center;
+	margin-left:-20px;
+    
+}
+
+.tab{
+	height:400px;
+	width:400px;
+	padding:50px;
+}
+div.intro{
+	display:flex;
+	flex-direction:row;
+}
+
+div.intro>section>img{
+	width:85%;
+	height:50%;
+	padding-left:10px;
+	 display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p#title{
+	padding-top:20px;
+	text-align:center;
+	font-family:"Campfire";
+	font-size:130%;
+	color:white;
+	
+}
+p#desc{
+	padding-top:15px;
+	text-align:center;
+	font-family:"FreeSans";
+	font-size:100%;
+	color:white;
+	
+}
+
+.intro{
+	border-bottom:solid;
+	border-bottom-color:black;
+}
+
+.ConLeft{
+	padding:80px;
+	padding-top:120px;
+}
+.ConLeft>section{
+	width:600px;
+	float:left;
+
+}
+.ConTitle{
+	color:white;
+	font-size:220%;
+	font-family:"Campfire";
+	padding-bottom:15px;
+}
+p.Link{
+	color:white;
+	font-size:220%;
+	font-family:"Campfire";
+	text-align:right;
+}
+.ConDesc{
+	color:white;
+	font-size:110%;
+	font-family:"FreeSans";
+	padding-bottom:15px;
+}
+
+.ConLeft>img{
+	width:30%;
+	height:50%;
+	margin-top:-80px;
+	padding-left: 140px;
+}
+
+.ConRight>img{
+	width:30%;
+	height:50%;
+	margin-top:-120px;
+	
+}
+
+.ConRight>section{
+	display:inline-block;
+	width:600px;
+	padding-left:200px;
+	
+}
+div.ConRight>p.ConTitle{
+	text-align: left;
+	color:white;
+	font-size:220%;
+	font-family:"Campfire";
+
+}
+
+div.ConRight>p.ConDesc{
+	text-align: right;
+	color:white;
+	font-size:110%;
+	font-family:"FreeSans";
+	
+}
+
+.ConRight>p.Link{
+	color:white;
+	font-size:220%;
+	font-family:"Campfire";
+	
+}
+
+#shareID{
+	padding-top:50px;
+	width:37%;
+	height:38%;
+	display:inline;
+	
+}
+
+a{
+	display: inline-block;
+  position: relative;
+}
+a#home:link {
+    text-decoration:none;
+	color:white;
+}
+
+
+a#home:visited {
+    text-decoration:none;
+}
+
+
+a#home:hover {
+    text-decoration:none;
+}
+
+
+a#home:active {
+    text-decoration:none;
+}
+a#home::after{
+	content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+a#home:hover::after{
+	transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a#sLinks{
+	padding-right: 8px;
+	margin-top:-4px;
+}
+
+p#error {
+	padding-top: 200px;
+	font-size: 100px;
+	text-align: center;
+	color:white;
+	font-family: "Campfire";
+	
+}
+
+p#woops {
+	font-size: 40px;
+	text-align: center;
+	color:white;
+	font-family:"FreeSans";
+	padding-top: 40px;
+}
+
+p#checkBack{
+	padding-top: 120px;
+	font-size: 40px;
+	text-align: center;
+	color:white;
+	font-family: "Campfire";
+	padding-bottom: 300px;
+	
+}
+.removeSec{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+

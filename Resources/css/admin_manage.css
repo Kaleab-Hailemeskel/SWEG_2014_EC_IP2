@@ -1,0 +1,105 @@
+*{
+	padding: 0px;
+	margin: 0px;
+
+}
+
+@font-face{
+  font-family: "FreeSans";
+  src:url("../font/FreeSansBold.ttf");
+}
+
+@font-face{
+  font-family: "Campfire";
+  src:url("../font/Campfire.ttf");
+}
+
+@font-face{
+	font-family: "Gentona ExtraBold";
+	src:url("../font/Gentona ExtraBold.otf")
+}
+
+.totalContainer{
+	margin-left:10px;
+	margin-right:10px;
+	margin-bottom:30px;
+	background-color:black;
+	
+}
+
+.mainCont{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	
+}
+label{
+	font-family:"Gentona ExtraBold";
+	color:white;
+	font-size:25px;
+	padding-right:3px;
+}
+
+label{
+	font-family:"Gentona ExtraBold";
+	color:white;
+	font-size:25px;
+	padding-right:3px;
+}
+label#em{
+	padding-right:10px;
+	
+}
+
+input[type="text"] {
+	font-family:"FreeSans";
+	height:25px;
+	padding: 5px;
+	border-radius:15px;
+	width:300px;
+	
+}
+
+input[type="email"] {
+	font-family:"FreeSans";
+	height:25px;
+	padding: 5px;
+	border-radius:15px;
+	width:300px;
+	margin-bottom:5px;
+	
+}
+
+input[type="password"] {
+	font-family:"FreeSans";
+	height:25px;
+	padding: 5px;
+	border-radius:15px;
+	width:300px;
+	
+}
+
+.buttonCont{
+	display:flex;
+	justify-content:center;
+	margin-bottom:50px;
+}
+li{
+	font-family:"Campfire";
+	font-size:25px;
+	padding:15px;
+	color:white;
+	
+}
+h2.notifiers{
+	color:white;
+	font-family:"Gentona ExtraBold";
+	margin-bottom:18px;
+}
+.space{
+	margin-bottom:5px;
+}
+.spaceFinal{
+	margin-bottom:20px;
+}
+

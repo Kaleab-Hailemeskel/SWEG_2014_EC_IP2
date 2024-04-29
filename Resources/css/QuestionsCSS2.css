@@ -1,0 +1,171 @@
+
+@font-face{
+font-family:"Gentona Book";
+src:url("../font/Gentona Book.otf");
+}
+
+@font-face{
+font-family:"Gentona Book Italic";
+src:url("../font/Gentona Book Italic.otf");
+}
+
+@font-face{
+font-family:"Gentona Bold Italic";
+src:url("../font/Gentona Book Italic.otf");
+}
+
+@font-face{
+font-family:"Gentona Medium Italic";
+src:url("../font/Gentona Medium Italic.otf");
+}
+
+@font-face{
+font-family:"Gentona ExtraLight Italic";
+src:url("../font/Gentona ExtraLight Italic.otf");
+}
+
+@font-face{
+font-family:"Gentona Bold";
+src:url("../font/Gentona Bold.otf");
+}
+
+@font-face{
+font-family:"Gentona ExtraBold";
+src:url("../font/Gentona ExtraBold.otf");
+}
+
+main {
+	padding: 20px;
+	
+}
+h1 {
+	text-align: center;
+	font-family: "Gentona Book", sans-serif;
+	color:wheat;
+	padding-top: 3%;
+}
+form {
+	max-width: 600px;
+	margin: 20px auto;
+	padding: 20px;
+	margin-bottom: 200px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: #4b4b4b;
+	color: #ffffff;
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+	color: #ffffff;
+	font-family:"Mont";
+	
+}
+
+input,
+select {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+button {
+	background-color: #4caf50;
+	font-family: "Gentona Book";
+	color: #ffffff;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #cf0564;
+}
+
+h2 {
+	color: #333333;
+	padding-top: 30px;
+}
+
+#preview {
+	margin-top: 20px;
+}
+
+div > div {
+	margin-bottom: 20px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 4px;
+	color: #333333;
+}
+
+label[for="correctChoice"] {
+	display: block;
+	margin-bottom: 8px;
+	color: #ffffff; /* Light text color for labels */
+}
+
+input#correctChoice {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+input#correctChoice:focus {
+	outline: none;
+	border-color: #4caf50;
+}
+
+button.editButton {
+	background-color: #3498db;
+	color: #ffffff;
+	padding: 5px 10px;
+	margin-left: 8px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button.editButton:hover {
+	background-color: #cf0564;
+}
+
+#previewHeader {
+	color: #ffffff;
+}
+
+h2#previewHeader{
+	font-family:"Gentona Bold";
+}
+label {
+	font-family:"Gentona Book";
+}
+
+

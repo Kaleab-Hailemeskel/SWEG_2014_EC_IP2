@@ -1,0 +1,162 @@
+#timeleft{
+	position: fixed;
+	color:white;
+	right:10%;
+}
+a{
+	color:white;
+	text-decoration: none;
+}
+.mathQuestionBody,.historyQuestionBody,.techQuestionBody,.sciQuestionBody,.genQuestionBody{
+background-color: black;
+margin: 20px;
+padding: 20px;
+font-size:25px ;
+color:white;
+}
+.options {
+    margin-left: 20px;
+  }
+  
+  .option {
+    margin-bottom: 10px;
+  }
+  #submit, #reset {
+    background-color:  #cf0564; 
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
+    border-radius: 12px; 
+	font-family:"Campfire";
+}
+
+#submit:hover, #reset:hover {
+    background-color:  #cf0525; 
+}
+body {
+    counter-reset: question-counter;  /* Initialize the counter */
+}
+
+p::before {
+    counter-increment: question-counter;  /* Increment the counter */
+    content: "Q" counter(question-counter) ". ";  /* Display the counter with prefix 'Q' and suffix '.' */
+}
+.radioWrapper {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	font-size: 18px;
+	user-select: none;
+	color:white;
+	font-family:"FreeSans";
+}
+
+.radioWrapper input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #ccc;
+	border-radius: 50%;
+}
+
+.radioWrapper:hover input ~ .checkmark {
+	background-color: #bbb;
+}
+
+.radioWrapper input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.radioWrapper input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.radioWrapper .checkmark:after {
+	left: 9px;
+	top: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+.genQuestionBody>form>div>p,.historyQuestionBody>form>div>p,.mathQuestionBody>form>div>p,.sciQuestionBody>form>div>p,.techQuestionBody>form>div>p{
+	padding:13px;
+	color:white;
+	font-family:"FreeSans";
+}
+.container{
+	padding-bottom:25px;
+}
+.buttons{
+	padding: 20px;
+}
+
+.subInfo{
+	font-family:"Campfire";
+	font-size:70px;
+	padding: 40px;
+	color: white;
+	text-align: center;
+}
+
+body{
+	background-image: url("../Img/Gradient.svg");
+}
+
+main{
+	font-family:"FreeSans"
+}
+.answer {
+    color: white; 
+    font-size: 50px; 
+    font-family: Arial, sans-serif; 
+    margin:50px ;
+	padding: 20px;
+}
+
+.score {
+    color: white; 
+    font-size: 20px; 
+    font-family: Arial, sans-serif; 
+    font-weight: bold; 
+    margin: 50px; 
+	padding: 20px;
+}
+#timer::before{
+content: "Time left: ";
+color:white;
+}
+#timer{
+	color: white;
+	font-family:"FreeSans";
+}
+
+div.answers{
+	font-size:20px;
+}
+#timeleft{
+	font-family:"Campfire";
+	font-size:20px;
+}
