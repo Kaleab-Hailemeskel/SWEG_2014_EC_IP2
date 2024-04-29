@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+</script>
+  <head> <link href="../Resources/img/MQ_fav.png" type="image/png" rel="icon"><link rel="stylesheet" href="../Resources/css/hfStyle.css"> 
+ <link rel="stylesheet" href="../Resources/css/S.css"></head>
+ <link rel="stylesheet" href="../Resources/css/admin.css"></head>
+<header>
+<img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo"/>
+<div class="listContainer">
+<ul id="headerList"> 
+<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.html" style="color:white;"> Home </a> </li> 
+<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.html" style="color:white;"> Practice </a> </li>
+<li id="headerListPoints"><a id="home" href="user.html" style="color:white;"> Account </a> </li>
+</ul>
+</div>
+
+<div id="LogTab">
+<span id="LogIn"><a id="home" href="log_in.html" style="color:white;">Log In</a> </span>
+<span id="SignUp"> <a id="home" href="sign_up.html" style="color:white;"> Sign Up </a></span>
+<div>
+</header>
+  <body>
+  <div class="topCon">
+    <h1>Administration</h1>
+    <h2 class="admin-name" id="admin-name"></h2>
+	</div>
+	<div class="actCon">
+    <div class="quizList">
+      <h3>Delete Quizzes</h3>
+	  <ul class="list">
+	  <li class="subjects" id="hisDel" ><button class="delBtn" onclick="hisDel()"> History </button></li>
+	  <li class="subjects" id="mathDel"><button class="delBtn" onclick="mathDel()"> Mathematics </button> </li>
+	  <li class="subjects" id="techDel"><button class="delBtn" onclick="techDel()"> Technology </button> </li>
+	  <li class="subjects" id="gkDel"><button class="delBtn" onclick="gkDel()"> General Knowledge </button> </li>
+	  <li class="subjects" id="sciDel"><button class="delBtn" onclick="sciDel()"> Science</button> </li>
+	   <li class="subjects" id="added1D"></li>
+	  <li class="subjects" id="added2D">  </li>
+	  <li class="subjects" id="added3D"> </li>
+	  </ul>
+    </div>
+    <div class="quizList">
+      <h3>Update Quizzes</h3>
+	  <ul class="list"> 
+	    <li class="subjects" id="hisUp"><button class="upBtn" onclick="hisUp()"> History </button> </li>
+	  <li class="subjects" id="mathUp"> <button class="upBtn" onclick="mathUp()"> Mathematics </button>  </li>
+	  <li class="subjects" id="techUp"><button class="upBtn" onclick="techUp()"> Technology </button> </li>
+	  <li class="subjects" id="gkUp"><button class="upBtn" onclick="gkUp()"> General Knowledge </button> </li>
+	  <li class="subjects" id="sciUp"><button class="upBtn" onclick="sciUp()"> Science </button> </li>
+	   <li class="subjects" id="added1U"></li>
+	  <li class="subjects" id="added2U">  </li>
+	  <li class="subjects" id="added3U"> </li>
+	  </ul>
+	  
+	  
+    </div>
+	</div>
+	
+	</div>
+	<div class="last">
+	<button id="adBtn" onclick="addQuiz()">Add Quiz </button>
+	 </div>
+  </body>
+  <footer>
+<div class="BoxContainer">
+<img id="fLogo" src="../Resources/Img//MQ.png" alt="Meta Quiz Logo"/>
+
+<div class="FBoxes">
+<span id="BoxTi">Company</span>
+<ul class="Ful"> 
+<li id="fLists"> <a style="color:white;" id="home" href="redirect.html"> Who is META?</a> </li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Where are we? </a></li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Our Clients? </a></li>
+</ul>
+ </div>
+ 
+ <div class="FBoxes">
+<span id="BoxTi"> Products</span>
+<ul class="Ful"> 
+<li id="fLists"> <a style="color:white;" id="home" href="redirect.html"> Weather System </a></li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Book Store</a> </li>
+</ul>
+
+ </div>
+ 
+ </div>
+ 
+ <div class="Socials">
+ <span id="follow"> Follow Us </span>
+ <div id="SM">
+ <a id="sLinks" href="http://instagram.com"><img src="../Resources/Img/Insta.png" alt="Instagram"></a>
+<a id="sLinks" href="http://facebook.com"> <img src="../Resources/Img/Facebook.png" alt="Facebook"></a>
+ <a id="sLinks" href="http://Youtube.com"><img src="../Resources/Img/Youtube.png" alt="YouTube"></a>
+<a id="sLinks" href="http://twitter.com"> <img src="../Resources/Img/X.png" alt="Twitte X"></a>
+ 
+ </div>
+ </div>
+ 
+ <div id="lic">
+ <ul> 
+ <li id="footerListPoints" class="rightBorder"><a style="color:white;" id="home" href="redirect.html">Privacy </a></li>
+ <li id="footerListPoints" class="rightBorder"> <a style="color:white;" id="home" href="redirect.html">Terms &amp; Conditions </a> </li>
+ <li id="footerListPoints"><a style="color:white;" id="home" href="redirect.html"> Security </a></li>
+ </ul>
+ 
+ <span id="MetaCopy"> &copy; META 2024 </span>
+ </div>
+</footer>
+
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="../Resources/js/adminAdd.js" defer></script>
+  <head> <link href="../Resources/img/MQ_fav.png" type="image/png" rel="icon"><link rel="stylesheet" href="../Resources/css/hfStyle.css"> 
+ <link rel="stylesheet" href="../Resources/css/S.css"></head>
+ <link rel="stylesheet" href="../Resources/css/admin.css"></head>
+  <link rel="stylesheet" href="../Resources/css/admin_manage.css"></head>
+<header>
+<img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo"/>
+<div class="listContainer">
+<ul id="headerList"> 
+<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.html" style="color:white;"> Home </a> </li> 
+<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.html" style="color:white;"> Practice </a> </li>
+<li id="headerListPoints"><a id="home" href="user.html" style="color:white;"> Account </a> </li>
+</ul>
+</div>
+
+<div id="LogTab">
+<span id="LogIn"><a id="home" href="log_in.html" style="color:white;">Log In</a> </span>
+<span id="SignUp"> <a id="home" href="sign_up.html" style="color:white;"> Sign Up </a></span>
+
+</header>
+  <body>
+  <div class="totalContainer">
+ <div class="topCon">
+  
+    <h1>Admin Manager</h1>
+    <h2 class="admin-name" id="admin-name">admin@gmail.com</h2>
+	</div>
+	<div class="mainCont">
+	<h2 class="notifiers">Register Admin </h2>
+	  <form class ="signin-form" id="adminForm">
+        <div class="input-wrap">
+          <label for="email" id="em">Email: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="email" id="email" name="email" placeholder="Email" >
+          <div class="error"></div>
+        </div>
+        <div class="input-wrap">
+          <label for = "password">Password: </label>
+          <input type="password" id="password" name="password" placeholder ="Password" ><br><br>
+          <div class="error"></div>
+
+        </div>
+        <div class ="input-wrap">
+          <label for = "passwordconfirm">Confirm <br/> Password: </label>
+          <input type="password" id="password2" name="passwordconfirm" 
+          placeholder="Confirm Password" ><br><br>
+           <div class="error"></div>
+
+        </div>
+
+        <div class="buttonCont">
+        <button id="adBtn">Add Admin</button><br>
+        </div>
+       </form>
+	   <div>
+	   <h2 class="notifiers">Current Admins </h2>
+		   <ol>
+           <span id="a1"> </span>
+		    <span id="a2"> </span>
+			 <span id="a4"> </span>
+			  <span id="a5"> </span>
+			   <span id="a6"> </span>
+			   <span id="a7"> </span>
+		   </ol>
+		   
+		   </div>
+	   </div>
+		   
+		   
+		   
+	
+	<div class="last">
+	<button id="adBtn" onclick="listAdmin()">List Admin</button>
+	 </div>
+	 
+	 <div class="removeSec">
+	 <div class="space">
+	 <h2 class="notifiers">Remove Admin </h2>
+	 </div>
+	  <div class="space">
+	 <input type="email" id="delEmail" name="delEmail" placeholder="Email of account" />
+	 </div>
+	  <div class="space">
+	 <input type="text" id="delPass" name="delPass" placeholder="Password of account" />
+	 </div>
+	  <div class="spaceFinal">
+	  
+	 	<button id="adBtn" onclick="delAdmin()">Delete Admin</button>
+		</div>
+	 </div>
+	 </div>
+  </body>
+
+  <footer>
+<div class="BoxContainer">
+<img id="fLogo" src="../Resources/Img//MQ.png" alt="Meta Quiz Logo"/>
+
+<div class="FBoxes">
+<span id="BoxTi">Company</span>
+<ul class="Ful"> 
+<li id="fLists"> <a style="color:white;" id="home" href="redirect.html"> Who is META?</a> </li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Where are we? </a></li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Our Clients? </a></li>
+</ul>
+ </div>
+ 
+ <div class="FBoxes">
+<span id="BoxTi"> Products</span>
+<ul class="Ful"> 
+<li id="fLists"> <a style="color:white;" id="home" href="redirect.html"> Weather System </a></li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Book Store</a> </li>
+</ul>
+
+ </div>
+ 
+ </div>
+ 
+ <div class="Socials">
+ <span id="follow"> Follow Us </span>
+ <div id="SM">
+ <a id="sLinks" href="http://instagram.com"><img src="../Resources/Img/Insta.png" alt="Instagram"></a>
+<a id="sLinks" href="http://facebook.com"> <img src="../Resources/Img/Facebook.png" alt="Facebook"></a>
+ <a id="sLinks" href="http://Youtube.com"><img src="../Resources/Img/Youtube.png" alt="YouTube"></a>
+<a id="sLinks" href="http://twitter.com"> <img src="../Resources/Img/X.png" alt="Twitte X"></a>
+ 
+ </div>
+ </div>
+ 
+ <div id="lic">
+ <ul> 
+ <li id="footerListPoints" class="rightBorder"><a style="color:white;" id="home" href="redirect.html">Privacy </a></li>
+ <li id="footerListPoints" class="rightBorder"> <a style="color:white;" id="home" href="redirect.html">Terms &amp; Conditions </a> </li>
+ <li id="footerListPoints"><a style="color:white;" id="home" href="redirect.html"> Security </a></li>
+ </ul>
+ 
+ <span id="MetaCopy"> &copy; META 2024 </span>
+ </div>
+</footer>
+
+
+</html>

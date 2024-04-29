@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head> <link rel="stylesheet" href="../Resources/css/hfStyle.css">
+<link rel="stylesheet" href="../Resources/css/update.css"> 
+<link href="../Resources/img/MQ_fav.png" type="image/png" rel="icon"></head>
+<header>
+
+<script>
+
+let tracker=0;
+let questions= new Array();
+let choicesHolder= new Array();
+let answers= new Array(); 
+
+function printer(){
+
+for(i=0;i<questions.length;i++){
+console.log("Question " + i);
+console.log(questions[i]);
+for(j=0;j<3;j++){
+console.log(choicesHolder[i] + " ");}
+console.log(answers[i]);
+console.log("Phase b");
+}
+}
+function questionAdder(){
+if(tracker<10){
+questions[tracker]= document.getElementById("Questions").value;
+let choices = new Array();
+for (i=0;i<4;i++){
+let j=i+1;
+choices[i]=document.getElementById(j).value;} 
+choicesHolder[tracker]=choices;
+
+answers[tracker]=document.getElementById("ans").value;
+
+tracker++;
+document.getElementById("number").innerHTML=tracker+1;}
+else {
+alert("Maximum number of questions reacher");}
+
+}
+
+function finalize(){
+let Updated= {Questions : questions,
+               Choices : choicesHolder,
+               Answers : answers}	;
+switch(sessionStorage.getItem("CurrentUpdate")) {
+
+case "History Update":
+let History= {Questions : questions,
+               Choices : choicesHolder,
+               Answers : answers}	;		
+sessionStorage.setItem("HistoryUpdate", 1);		   
+ sessionStorage.setItem("UpdatedHi", JSON.stringify(History));	
+ break;
+ case "Technology Update": 
+ 		
+sessionStorage.setItem("TechUpdate", 1);		   
+ sessionStorage.setItem("UpdatedTech", JSON.stringify(Updated));	
+ break;
+ case "Science Update":
+ 	
+sessionStorage.setItem("SciUpdate", 1);		   
+ sessionStorage.setItem("UpdateSci", JSON.stringify(Updated));	
+ break;
+ 
+ case "General Knowledge Update":
+ 	
+sessionStorage.setItem("GKUpdate", 1);		   
+ sessionStorage.setItem("UpdatedGK", JSON.stringify(Updated));	
+ break;
+ case "Mathematics Update":
+ 		
+sessionStorage.setItem("MathUpdate", 1);		   
+ sessionStorage.setItem("UpdatedMath", JSON.stringify(Updated));	
+ break;
+ 
+ 
+ default: alert("No such file to update");
+         window.location="admin.html";
+ }
+alert("Quiz Update complete");
+window.location="admin.html";
+
+ 
+ }
+ 
+ function after(){
+ let MyItem=JSON.parse(sessionStorage.getItem("UpdatedHi"));
+let impQue = MyItem.Questions;
+ let impChoices= MyItem.Choices;
+ let impAns= MyItem.Answers;
+  for(i=0;i<1;i++){
+ console.log(impQue[i]);
+ let cho=impChoices[i];
+ for(j=0;j<3;j++){
+  console.log(cho[j]);
+ }
+  console.log(impAns[i]);
+
+ }
+ 
+ }
+			  
+
+
+</script>
+<img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo"/>
+<div class="listContainer">
+<ul id="headerList"> 
+<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.html" style="color:white;"> Home </a> </li> 
+<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.html" style="color:white;"> Practice </a> </li>
+<li id="headerListPoints"><a id="home" href="user.html" style="color:white;"> Account </a> </li>
+</ul>
+</div>
+
+<div id="LogTab">
+<span id="LogIn"><a id="home" href="log_in.html" style="color:white;">Log In</a> </span>
+<span id="SignUp"> <a id="home" href="sign_up.html"style="color:white;"> Sign Up </a></span>
+<div>
+</header>
+<body>
+<div class="total">
+<h1 id="subTitle"> </h1>
+<script>
+document.getElementById("subTitle").innerHTML=sessionStorage.getItem("CurrentUpdate");
+</script>
+<div class="Question">
+<label for="Question">Questions </label> <span id="number">1</span>
+<input type="text" name="Question" size="60" placeholder="Enter your question" id="Questions"/> 
+<br/>
+</div>
+<div class="choices">
+<div class="single">
+<label for ="C1">Choice A</label>
+<input type="text" name="C1" size="15" id="1"/> 
+</div>
+<div class="single">
+<label for ="C2">Choice B</label>
+<input type="text" name="C2" size="15" id="2"/> 
+</div>
+<div class="single">
+<label for ="C3">Choice C</label>
+<input type="text" name="C3" size="15" id="3"/> 
+</div>
+<div class="single">
+<label for ="C4">Choice D</label>
+<input type="text" name="C4" size="15" id="4"/>
+</div>
+</div>
+
+<br/>
+<div class="sub">
+<label for ="ans">Correct Choice</label>
+<input type="text" name="ans" size="5" id="ans"/> 
+
+
+<button onclick="questionAdder()">Submit </button>
+</div>
+
+
+
+
+<button onclick="finalize()" id="final" >Finalize  </button>
+
+
+
+</div>
+
+
+</body>
+<footer>
+<div class="BoxContainer">
+<img id="fLogo" src="../Resources/Img//MQ.png" alt="Meta Quiz Logo"/>
+
+<div class="FBoxes">
+<span id="BoxTi">Company</span>
+<ul class="Ful"> 
+<li id="fLists"> <a style="color:white;" id="home" href="redirect.html"> Who is META?</a> </li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Where are we? </a></li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Our Clients? </a></li>
+</ul>
+ </div>
+ 
+ <div class="FBoxes">
+<span id="BoxTi"> Products</span>
+<ul class="Ful"> 
+<li id="fLists"> <a style="color:white;" id="home" href="redirect.html"> Weather System </a></li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Book Store</a> </li>
+</ul>
+
+ </div>
+ 
+ </div>
+ 
+ <div class="Socials">
+ <span id="follow"> Follow Us </span>
+ <div id="SM">
+ <a id="sLinks" href="http://instagram.com"><img src="../Resources/Img/Insta.png" alt="Instagram"></a>
+<a id="sLinks" href="http://facebook.com"> <img src="../Resources/Img/Facebook.png" alt="Facebook"></a>
+ <a id="sLinks" href="http://Youtube.com"><img src="../Resources/Img/Youtube.png" alt="YouTube"></a>
+<a id="sLinks" href="http://twitter.com"> <img src="../Resources/Img/X.png" alt="Twitte X"></a>
+ 
+ </div>
+ </div>
+ 
+ <div id="lic">
+ <ul> 
+ <li id="footerListPoints" class="rightBorder"><a style="color:white;" id="home" href="redirect.html">Privacy </a></li>
+ <li id="footerListPoints" class="rightBorder"> <a style="color:white;" id="home" href="redirect.html">Terms &amp; Conditions </a> </li>
+ <li id="footerListPoints"><a style="color:white;" id="home" href="redirect.html"> Security </a></li>
+ </ul>
+ 
+ <span id="MetaCopy"> &copy; META 2024 </span>
+ </div>
+</footer>

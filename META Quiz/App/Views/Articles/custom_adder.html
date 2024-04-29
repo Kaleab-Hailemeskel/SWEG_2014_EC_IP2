@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head> <link rel="stylesheet" href="../Resources/css/hfStyle.css">
+<link rel="stylesheet" href="../Resources/css/update2.css"> 
+<link href="../Resources/img/MQ_fav.png" type="image/png" rel="icon"></head>
+<header>
+
+<script>
+let actCh=sessionStorage.getItem("CurrentAccount");
+let account=JSON.parse(sessionStorage.getItem(actCh));
+
+let tracker=0;
+let questions= new Array();
+let choicesHolder= new Array();
+let answers= new Array(); 
+
+
+function questionAdder(){
+if(tracker<10){
+questions[tracker]= document.getElementById("Questions").value;
+let choices = new Array();
+for (i=0;i<4;i++){
+let j=i+1;
+choices[i]=document.getElementById(j).value;} 
+choicesHolder[tracker]=choices;
+
+answers[tracker]=document.getElementById("ans").value;
+
+tracker++;
+document.getElementById("number").innerHTML=tracker+1;}
+else {
+alert("Maximum number of questions reacher");}
+
+}
+
+
+
+function finalize(){
+
+let title=document.getElementById("Title").value;
+if(title==sessionStorage.getItem(title)){
+alert("This quiz cannot be created, since there is a quiz with the same title registered somewhere");
+return;}
+let quizNew= {Questions : questions,
+               Choices : choicesHolder,
+               Answers : answers,
+			   Title: title
+			   
+			   }	;
+			   
+sessionStorage.setItem(title,JSON.stringify(quizNew));
+ if(account.customQuizes[0]==""){
+ account.customQuizes[0]=title;
+ }
+ else if(account.customQuizes[1]==""){
+ account.customQuizes[1]=title;
+ }
+ else if(account.customQuizes[2]==""){
+ account.customQuizes[2]=title;
+ }
+  else if(account.customQuizes[3]==""){
+ account.customQuizes[3]=title;
+ }
+ else if(account.customQuizes[4]==""){
+ account.customQuizes[4]=title;
+ }
+
+account.quizesNumber++;
+sessionStorage.setItem(actCh,JSON.stringify(account));
+
+alert("Adding Custom Quiz Complete");
+window.location="user.html";
+ 
+ }
+ 
+			  
+
+
+</script>
+<img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo"/>
+<div class="listContainer">
+<ul id="headerList"> 
+<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.html" style="color:white;"> Home </a> </li> 
+<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.html" style="color:white;"> Practice </a> </li>
+<li id="headerListPoints"><a id="home" href="about_us.html" style="color:white;"> About Us </a> </li>
+</ul>
+</div>
+
+<div id="LogTab">
+<span id="LogIn"><a id="home" href="log_in.html" style="color:white;">Log In</a> </span>
+<span id="SignUp"> <a id="home" href="sign_up.html"style="color:white;"> Sign Up </a></span>
+<div>
+</header>
+<body>
+<div class="total">
+<h1 id="subTitle">Quiz Adder</h1>
+
+
+<div class="quizDescs">
+<label for="Title">Quiz Title </label>
+<input type="text" name="Title" size="40" placeholder="Enter your title" id="Title"/> </br>
+
+
+</div>
+<div class="Question">
+<label for="Question">Question </label> <span id="number">1</span>
+<input type="text" name="Question" size="60" placeholder="Enter your question" id="Questions"/> 
+<br/>
+</div>
+<div class="choices">
+<div class="single">
+<label for ="C1">Choice A</label>
+<input type="text" name="C1" size="15" id="1"/> 
+</div>
+<div class="single">
+<label for ="C2">Choice B</label>
+<input type="text" name="C2" size="15" id="2"/> 
+</div>
+<div class="single">
+<label for ="C3">Choice C</label>
+<input type="text" name="C3" size="15" id="3"/> 
+</div>
+<div class="single">
+<label for ="C4">Choice D</label>
+<input type="text" name="C4" size="15" id="4"/>
+</div>
+</div>
+
+<br/>
+<div class="sub">
+<label for ="ans">Correct Choice</label>
+<input type="text" name="ans" size="5" id="ans"/> 
+
+
+<button onclick="questionAdder()">Submit </button>
+
+</div>
+
+
+
+
+<button onclick="finalize()" id="final" >Finalize  </button>
+
+
+
+</div>
+
+</body>
+<footer>
+<div class="BoxContainer">
+<img id="fLogo" src="../Resources/Img//MQ.png" alt="Meta Quiz Logo"/>
+
+<div class="FBoxes">
+<span id="BoxTi">Company</span>
+<ul class="Ful"> 
+<li id="fLists"> <a style="color:white;" id="home" href="redirect.html"> Who is META?</a> </li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Where are we? </a></li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Our Clients? </a></li>
+</ul>
+ </div>
+ 
+ <div class="FBoxes">
+<span id="BoxTi"> Products</span>
+<ul class="Ful"> 
+<li id="fLists"> <a style="color:white;" id="home" href="redirect.html"> Weather System </a></li>
+<li id="fLists"><a style="color:white;" id="home" href="redirect.html"> Book Store</a> </li>
+</ul>
+
+ </div>
+ 
+ </div>
+ 
+ <div class="Socials">
+ <span id="follow"> Follow Us </span>
+ <div id="SM">
+ <a id="sLinks" href="http://instagram.com"><img src="../Resources/Img/Insta.png" alt="Instagram"></a>
+<a id="sLinks" href="http://facebook.com"> <img src="../Resources/Img/Facebook.png" alt="Facebook"></a>
+ <a id="sLinks" href="http://Youtube.com"><img src="../Resources/Img/Youtube.png" alt="YouTube"></a>
+<a id="sLinks" href="http://twitter.com"> <img src="../Resources/Img/X.png" alt="Twitte X"></a>
+ 
+ </div>
+ </div>
+ 
+ <div id="lic">
+ <ul> 
+ <li id="footerListPoints" class="rightBorder"><a style="color:white;" id="home" href="redirect.html">Privacy </a></li>
+ <li id="footerListPoints" class="rightBorder"> <a style="color:white;" id="home" href="redirect.html">Terms &amp; Conditions </a> </li>
+ <li id="footerListPoints"><a style="color:white;" id="home" href="redirect.html"> Security </a></li>
+ </ul>
+ 
+ <span id="MetaCopy"> &copy; META 2024 </span>
+ </div>
+</footer>
