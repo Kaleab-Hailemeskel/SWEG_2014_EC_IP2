@@ -15,10 +15,10 @@ function make_table($connection, $query){
 }
 function delete_table($connection, $query){
     if($connection->query($query) == TRUE){
-        echo "Table destroyed successfully.";
+        echo "Table destroyed successfully.<br>";
     }
     else{
-        echo "Error destroying table: " . $connnection->error;
+        echo "Error destroying table: " . $connnection->error . "<br>";
     }
 }
 
@@ -103,6 +103,14 @@ make_table($conn, $admin_questions_creator);
 make_table($conn, $user_questions_creator);
 make_table($conn, $admin_options_creator);
 make_table($conn, $user_options_creator);
+
+
+
+if($conn->query("INSERT INTO users (username, password, email) VALUES (0,0,0);") == TRUE){
+    echo "Default user (username, password, and email all 0; user_id 1) created successfully.<br>";
+} else {
+    echo "Error destroying table: " . $connnection->error . "<br>";
+}
 
 
 $conn->close();
