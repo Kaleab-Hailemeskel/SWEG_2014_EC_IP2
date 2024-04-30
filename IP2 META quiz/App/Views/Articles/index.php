@@ -26,21 +26,21 @@
 
 <section class="tab">
 <img id="introImg" src="../Resources/img/register.png" alt="Register icon"/>
-<p id="title">1. <a id="home" href="sign_up.html" style="color:white;">Register </a></p>
+<p id="title">1. <a id="home" href="ip2_sign_up.html" style="color:white;">Register </a></p>
 <p id="desc"> Regsiter for free to be part of our community </p>
  </section>
  
  
 <section class="tab">
 <img id="introImg" src="../Resources/Img/practice.png" alt="Register icon"/>
-<p id="title">2. <a id="home" href="course_selection.html" style="color:white;"> Practice </a></p>
+<p id="title">2. <a id="home" href="course_selection.php" style="color:white;"> Practice </a></p>
 <p id="desc"> Practice with the best in class questions in the field </p>
  </section>
  
  
 <section class="tab">
 <img id="introImg" src="../Resources/Img/Personalize.png" alt="Register icon"/>
-<p id="title">3. <a id="home" href="sign_up.html" style="color:white;">Personalize </a></p>
+<p id="title">3. <a id="home" href="ip2_sign_up.html" style="color:white;">Personalize </a></p>
 <p id="desc"> Personalize your own experience by creating your very own custom quizes </p>
  </section>
  
@@ -59,7 +59,7 @@
 <section>
 <p class="ConTitle">Ready Made Courses </p>
 <p class="ConDesc">Try practicing on our ready made course questions right from the go, from a variety of subjects </p>
-<p class="Link"> <a id="home" href="course_selection.html" style="color:white;">Practice Now </a></p>
+<p class="Link"> <a id="home" href="course_selection.php" style="color:white;">Practice Now </a></p>
 </section>
 <img src="../Resources/Img/Courses.png" alt="Courses Image" />
 
