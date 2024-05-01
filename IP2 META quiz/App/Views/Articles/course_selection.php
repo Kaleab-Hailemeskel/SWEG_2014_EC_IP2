@@ -62,9 +62,10 @@ mysqli_close($connection);
     <div class="rounded-box">
         <img src="../Resources/Img/science.jpg" alt="Science Image">
         <div class="button-container">
-            <a id="courseLinks" href="course_present?quiz_id=<?php echo $quiz['quiz_id'];?>&quiz_name=<?php echo $quiz['quiz_name']?>">
-                <button class = "btn-course"><?php echo $quiz['quiz_name']?></button> </a>
-    
+        <a id="courseLinks" href="course_present.php?quiz_id=<?php echo urlencode($quiz['quiz_id']);?>&quiz_name=<?php echo urlencode($quiz['quiz_name'])?>">
+    <button class = "btn-course"><?php echo $quiz['quiz_name']?></button>
+</a>
+
         </div>
     </div>
 
