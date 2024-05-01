@@ -70,7 +70,7 @@ mysqli_close($connection);
     <div class="rounded-box">
         
         <div class="button-container">
-            <a id="courseLinks" href="course_present?quiz_id=<?php echo $quiz['quiz_id'];?>&quiz_name=<?php echo $quiz['quiz_name']?>">
+            <a id="courseLinks" href="course_present_user.php?quiz_id=<?php echo urlencode($quiz['quiz_id']);?>&quiz_name=<?php echo urlencode($quiz['quiz_name'])?>">
                 <button class = "btn-course"><?php echo $quiz['quiz_name']?></button> </a>
     
         </div>
