@@ -54,30 +54,30 @@ if (mysqli_num_rows($result_questions) > 0) {
         $result_options = mysqli_query($conn, $sql_options);
 
         if (mysqli_num_rows($result_options) > 0) {
-           
             while($option = mysqli_fetch_assoc($result_options)) {
-                echo '<label class="radioWrapper">' . $option['question_1'];
-                echo '<input type="radio" id="q' . $row['question_id'] . 'o1" name="q' . $row['question_id'] . '">';
-                echo '<span class="checkmark"></span>';
-                echo '</label>';
-           
+                for ($i = 1; $i <= 4; $i++) {
+                    echo '<label class="radioWrapper">' . $option['question_'.$i];
+                    echo '<input type="radio" id="q' . $row['question_id'] . 'o' . $i . '" name="q' . $row['question_id'] . '">';
+                    echo '<span class="checkmark"></span>';
+                    echo '</label>';
+                }
             }
         }
+        
         echo '</div></div>';
     }
 } 
 
 mysqli_close($conn);
 ?>
+<form method="post" action=" ">
 <div>
 <button type="submit" id="submit">Submit </button> <span>  </span><button type="reset" id="reset">Reset</button>
 </div>
 
  </div>
 
-<div >
-<button type="submit" id="submit">Submit </button> <span>  </span><button type="reset" id="reset">Reset</button>
-</div>
+
 </form>
 
 </div>
