@@ -38,7 +38,7 @@ if (!$conn) {
 
 $quiz_id = $_GET['quiz_id'];
 
-$sql_questions = "SELECT question_id, question_text FROM user_questions WHERE quiz_id = $quiz_id";
+$sql_questions = "SELECT question_id, question_text FROM user_questions WHERE quiz_id = '$quiz_id'";
 
 
 $result_questions = mysqli_query($conn, $sql_questions);
@@ -57,11 +57,12 @@ if (mysqli_num_rows($result_questions) > 0) {
         if (mysqli_num_rows($result_options) > 0) {
            
             while($option = mysqli_fetch_assoc($result_options)) {
-                echo '<label class="radioWrapper">' . $option['question_1'];
-                echo '<input type="radio" id="q' . $row['question_id'] . 'o1" name="q' . $row['question_id'] . '">';
-                echo '<span class="checkmark"></span>';
-                echo '</label>';
-           
+                for ($i = 1; $i <= 4; $i++) {
+                    echo '<label class="radioWrapper">' . $option['question_'.$i];
+                    echo '<input type="radio" id="q' . $row['question_id'] . 'o' . $i . '" name="q' . $row['question_id'] . '">';
+                    echo '<span class="checkmark"></span>';
+                    echo '</label>';
+                }
             }
         }
         echo '</div></div>';
@@ -75,10 +76,6 @@ mysqli_close($conn);
 </div>
 
  </div>
-
-<div >
-<button type="submit" id="submit">Submit </button> <span>  </span><button type="reset" id="reset">Reset</button>
-</div>
 </form>
 
 </div>
