@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
- <head> <link href="../Resources/img/MQ_fav.png" type="image/png" rel="icon"><link rel="stylesheet" href="../Resources/css/hfStyle.css">
+ <head>
+ <script src="Timer.js">
+        
+ </script>
+<link href="../Resources/img/MQ_fav.png" type="image/png" rel="icon"><link rel="stylesheet" href="../Resources/css/hfStyle.css">
 <link rel="stylesheet" href="../Resources/css/S.css"> </head>
 <header>
 <img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo"/>
@@ -21,6 +25,7 @@
 <main>
 <div class="historyQuestionBody">
 <div class="subInfo"><?php echo $_GET['quiz_name']?></div>
+
 <?php
 
 $servername = "localhost";
@@ -57,12 +62,13 @@ if (mysqli_num_rows($result_questions) > 0) {
             while($option = mysqli_fetch_assoc($result_options)) {
                 for ($i = 1; $i <= 4; $i++) {
                     echo '<label class="radioWrapper">' . $option['question_'.$i];
-                    echo '<input type="radio" id="q' . $row['question_id'] . 'o' . $i . '" name="q' . $row['question_id'] . '">';
+                    echo '<input type="radio" id="q' . $row['question_id'] . 'o' . $i . '" name="q' . $row['question_id'] . '" value="' . $i . '">';
                     echo '<span class="checkmark"></span>';
                     echo '</label>';
                 }
             }
         }
+        
         
         echo '</div></div>';
     }
@@ -70,6 +76,7 @@ if (mysqli_num_rows($result_questions) > 0) {
 
 mysqli_close($conn);
 ?>
+<input type="hidden" id="quizId" value="<?php echo $quiz_id;?>">
 <form method="post" action=" ">
 <div>
 <button type="submit" id="submit">Submit </button> <span>  </span><button type="reset" id="reset">Reset</button>
