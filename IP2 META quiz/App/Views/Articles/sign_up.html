@@ -32,7 +32,14 @@
        <div class="section--signup">
         <h3 id="sign">Sign Up</h3>
         <p id="caption">Complete the following informations to get started </p>
-       <form class ="signin-form" action="redirect.html">
+       <!-- THE FORM SHOULD HAVE action = "sign_in.php"-->
+	<form class ="signin-form" action="sign_in.php">
+		 
+        <div class="input-wrap">
+          <label for = "name">Full Name: </label>
+          <input type="text" name = "name" id="name" placeholder="Full Name" required><br><br>
+        </div>
+		
         <div class="input-wrap">
           <label for="email">Email: </label>
           <input type="email" id="email" name="email" placeholder="Email" required><br><br>
