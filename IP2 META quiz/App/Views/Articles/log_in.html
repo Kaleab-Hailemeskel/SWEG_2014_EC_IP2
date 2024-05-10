@@ -29,15 +29,15 @@
     <div class="container">
     <div class="login--box"> 
      <div class="box--content">
-      <form action = "course_selection.html">
-      <h2>Log In</h2>
-      <p id="label-sign">Sign Back in to continue your practice</p>
-      <input type="email" name="email" placeholder="Email" class="inputs" required><br>
-      <input type="password" name="pass" placeholder="Password" class="inputs" required>
-      <p class="forgot-pass"><a id="home" href="redirect.html" style="color:white;"> Forgot your password? </a></p>
-      <button type="login" name="login" class="btn--login">Log In</button>
-      <p id="signup-segue">New to META Quiz? <a href="sign_up.html" style="color:white;"> <i>Join Now<i></a></p>
-      </form>
+        <form action = "log_in.php" method="post">
+          <h2>Log In</h2>
+          <p id="label-sign">Sign Back in to continue your practice</p>
+          <input type="email" name="email" placeholder="Email" class="inputs" required><br>
+          <input type="password" name="pass" placeholder="Password" class="inputs" required>
+          <p class="forgot-pass"><a id="home" href="redirect.html" style="color:white;"> Forgot your password? </a></p>
+          <button type="submit" name="login_btn" class="btn--login">Log In</button>
+           <p  id="signup-segue">New to META Quiz? <a href="sign_up.html" style="color:white;"> <i>Join Now<i></a></p>
+        </form>
      </div>     
   </div>
 </div>
