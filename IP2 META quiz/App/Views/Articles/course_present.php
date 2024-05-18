@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
  <head>
- <script src="Timer.js">
-        
- </script>
 <link href="../Resources/img/MQ_fav.png" type="image/png" rel="icon"><link rel="stylesheet" href="../Resources/css/hfStyle.css">
 <link rel="stylesheet" href="../Resources/css/S.css"> </head>
+<body>
 <header>
 <img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo"/>
 <div class="listContainer">
@@ -21,11 +19,14 @@
 <span id="SignUp"> <a id="home" href="sign_up.html" style="color:white;"> Sign Up </a></span>
 <div>
 </header>
-
+<div id="timeleft">
+   
+</div>   
 <main>
 <div class="historyQuestionBody">
 <div class="subInfo"><?php echo $_GET['quiz_name']?></div>
-
+<div id="timer"></div>
+<form method="" action="">
 <?php
 
 $servername = "localhost";
@@ -66,6 +67,7 @@ if (mysqli_num_rows($result_questions) > 0) {
                     echo '<span class="checkmark"></span>';
                     echo '</label>';
                 }
+                echo '<div class="answers"></div>';
             }
         }
         
@@ -76,8 +78,9 @@ if (mysqli_num_rows($result_questions) > 0) {
 
 mysqli_close($conn);
 ?>
+
 <input type="hidden" id="quizId" value="<?php echo $quiz_id;?>">
-<form method="post" action=" ">
+
 <div>
 <button type="submit" id="submit">Submit </button> <span>  </span><button type="reset" id="reset">Reset</button>
 </div>
@@ -135,5 +138,9 @@ mysqli_close($conn);
  <span id="MetaCopy"> &copy; META 2024 </span>
  </div>
 </footer>
+<script src="Timer.js">     
+  
 
+ </script>
+</body>
 </html>
