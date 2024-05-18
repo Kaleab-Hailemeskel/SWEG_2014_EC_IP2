@@ -3,7 +3,6 @@ session_start();
 include("clean_input.php");
 include("dbcon.php");
 
-
 $user_email = $user_password = "";
 if(isset($_POST["login_btn"])){
     $user_email = clean_input( $_POST["email"]);
@@ -13,14 +12,14 @@ if(isset($_POST["login_btn"])){
     $search_query_run =  mysqli_query($con, $search_query);
 
     if(mysqli_num_rows($search_query_run) == 1){
+        $user = mysqli_fetch_assoc($search_query_run);
+        $_SESSION["user_id"] = $user['user_id']; 
         $_SESSION["curr"] = "correct password login allowed";
         echo "correct email and password<br>";
+        
+        
+        header("Location: course_selection_for_users.php");
+        exit;
     }
-
 }
-
-
-
-
-
 ?>
