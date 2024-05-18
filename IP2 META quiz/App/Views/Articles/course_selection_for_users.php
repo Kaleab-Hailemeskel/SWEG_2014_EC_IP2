@@ -41,17 +41,7 @@ $username="root";
 $password="";
 $dbname="quiz_db";
 $connection=mysqli_connect($servername,$username,$password,$dbname);
-$email=$_POST['email'];
-$pass=$_POST['pass'];
-$temp_qury="SELECT user_id from users where email='$email' and password='$pass' limit 1";
-
-$re=mysqli_query($connection,$temp_qury);
-if(!$connection){
-   
-    die("connection failed: ".mysqli_connect_error());
-}
-    $row = mysqli_fetch_assoc($re);
-    $user_id = $row['user_id'];
+    $user_id =$_SESSION['user_id'];
     $query="SELECT quiz_id,quiz_name,user_id from user_quizzes where user_id='$user_id'";
 
 $result=mysqli_query($connection,$query);
