@@ -2,6 +2,7 @@
 <html>
  <head> <link href="../Resources/img/MQ_fav.png" type="image/png" rel="icon"><link rel="stylesheet" href="../Resources/css/hfStyle.css">
 <link rel="stylesheet" href="../Resources/css/S.css"> </head>
+<body>
 <header>
 <img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo"/>
 <div class="listContainer">
@@ -20,7 +21,10 @@
 
 <main>
 <div class="historyQuestionBody">
+<div id="timeleft"></div>
 <div class="subInfo"><?php echo $_GET['quiz_name']?></div>
+<div id="timer"></div>
+<form method="" action="">
 <?php
 
 $servername = "localhost";
@@ -37,8 +41,8 @@ if (!$conn) {
 
 
 $quiz_id = $_GET['quiz_id'];
-
-$sql_questions = "SELECT question_id, question_text FROM user_questions WHERE quiz_id = '$quiz_id'";
+$user_id=$_SESSION['user_id'];
+$sql_questions = "SELECT question_id, question_text FROM user_questions WHERE quiz_id = '$quiz_id' and user_id='$user_id'";
 
 
 $result_questions = mysqli_query($conn, $sql_questions);
@@ -62,7 +66,9 @@ if (mysqli_num_rows($result_questions) > 0) {
                     echo '<input type="radio" id="q' . $row['question_id'] . 'o' . $i . '" name="q' . $row['question_id'] . '">';
                     echo '<span class="checkmark"></span>';
                     echo '</label>';
+             
                 }
+                echo 'div class="answers"></div>';
             }
         }
         echo '</div></div>';
@@ -72,6 +78,8 @@ if (mysqli_num_rows($result_questions) > 0) {
 mysqli_close($conn);
 ?>
 <div>
+<input type="hidden" id="quizId" value="<?php echo $quiz_id;?>">
+<input type="hidden" id="userid" value="<?php echo $user_id;?>">
 <button type="submit" id="submit">Submit </button> <span>  </span><button type="reset" id="reset">Reset</button>
 </div>
 
@@ -126,5 +134,9 @@ mysqli_close($conn);
  <span id="MetaCopy"> &copy; META 2024 </span>
  </div>
 </footer>
+<script src="Timer2.js">     
+  
 
+ </script>
+</body>
 </html>
