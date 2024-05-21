@@ -137,6 +137,11 @@
 	   justify-content:flex-start;
 	   display:flex;
 	   margin-top:40px;
+           align-items: center;
+           margin-left: 80px;
+           opacity: 1;
+           border-radius: 15px;
+           font-family: Campfire;
    }
     
     .box--content p:last-child {
