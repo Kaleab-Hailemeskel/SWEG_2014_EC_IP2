@@ -130,7 +130,12 @@
   }
  
     
-   
+   .box--log{
+	   width:25px;
+	   border:none;
+	   background-color:#930b32;
+	   justify-content:flex-start;
+   }
     
     .box--content p:last-child {
       margin-top: 40px;
