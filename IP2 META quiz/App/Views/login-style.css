@@ -61,7 +61,19 @@
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  
+  .box--fill{
+	   width:25px;
+	   border:none;
+	   background-color:#930b32;
+	   justify-content:flex-start;
+	   display:flex;
+	   margin-top:40px;
+           align-items: center;
+           margin-left: 80px;
+           opacity: 1;
+           border-radius: 15px;
+           font-family: Campfire;
+   }
   .container {
     display: flex;
     justify-content: center;
