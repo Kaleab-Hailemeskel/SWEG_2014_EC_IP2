@@ -1,0 +1,81 @@
+CREATE DATABASE RegistrationDB;
+
+USE RegistrationDB;
+
+-- Main table for personal, contact, and account details
+CREATE TABLE Users (
+    userID INT AUTO_INCREMENT PRIMARY KEY,
+    fullName VARCHAR(255) NOT NULL,
+    dob DATE NOT NULL,
+    gender ENUM('male', 'female', 'other') DEFAULT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone VARCHAR(20),
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    securityQuestion ENUM('pet', 'school', 'city') DEFAULT NULL,
+    securityAnswer VARCHAR(255) NOT NULL
+);
+
+-- Table for educational information
+CREATE TABLE EducationalInformation (
+    userID INT,
+    educationLevel ENUM('highSchool', 'undergraduate', 'graduate') DEFAULT NULL,
+    fieldOfInterest VARCHAR(255),
+    PRIMARY KEY (userID),
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+
+-- Table for payment information
+CREATE TABLE PaymentInformation (
+    userID INT,
+    cardNumber VARCHAR(16) NOT NULL,
+    expiryDate DATE NOT NULL,
+    cvv VARCHAR(4) NOT NULL,
+    billingAddress TEXT NOT NULL,
+    PRIMARY KEY (userID),
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+
+-- Table for professional information
+CREATE TABLE ProfessionalInformation (
+    userID INT,
+    jobTitle VARCHAR(255),
+    company VARCHAR(255),
+    PRIMARY KEY (userID),
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+
+-- Table for profile information
+CREATE TABLE ProfileInformation (
+    userID INT,
+    profilePicture LONGBLOB,
+    bio TEXT,
+    PRIMARY KEY (userID),
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+
+-- Table for location information
+CREATE TABLE LocationInformation (
+    userID INT,
+    country VARCHAR(255) NOT NULL,
+    PRIMARY KEY (userID),
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+
+-- Table for preferences
+CREATE TABLE Preferences (
+    userID INT,
+    courseRecommendations TEXT,
+    communicationPreferences ENUM('email', 'sms', 'phone') DEFAULT 'email',
+    PRIMARY KEY (userID),
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+
+-- Table for additional information
+CREATE TABLE AdditionalInformation (
+    userID INT,
+    referral VARCHAR(255),
+    goals TEXT,
+    PRIMARY KEY (userID),
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
