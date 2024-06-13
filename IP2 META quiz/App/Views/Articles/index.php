@@ -2,21 +2,20 @@
 <head><link href="../Resources/img/MQ_fav.png" type="image/png" rel="icon"> <link rel="stylesheet" href="../Resources/css/hfStyle.css"> </head>
 <body>
 <header>
-<div class="flexCon">
 <img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo"/>
 <div class="listContainer">
 <ul id="headerList"> 
-<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.html" style="color:white;"> Home </a> </li> 
-<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.html" style="color:white;"> Practice </a> </li>
+<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.php" style="color:white;"> Home </a> </li> 
+<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.php" style="color:white;"> Practice </a> </li>
 <li id="headerListPoints"><a id="home" href="about_us.html" style="color:white;"> About Us </a> </li>
 </ul>
-</div>
 
+</div>
 
 <div id="LogTab">
-<span id="LogIn"><a id="home" href="log_in.html" style="color:white;">Log In</a> </span>
-<span id="SignUp"> <a id="home" href="sign_up.html" style="color:white;"> Sign Up </a></span>
-</div>
+<span id="LogIn"><a id="home" href="log_in.php" style="color:white;">Log In</a> </span>
+<span id="SignUp"> <a id="home" href="sign_up.php" style="color:white;"> Sign Up </a></span>
+<div>
 </header>
 
 
@@ -26,7 +25,7 @@
 
 <section class="tab">
 <img id="introImg" src="../Resources/img/register.png" alt="Register icon"/>
-<p id="title">1. <a id="home" href="ip2_sign_up.html" style="color:white;">Register </a></p>
+<p id="title">1. <a id="home" href="sign_up.php" style="color:white;">Register </a></p>
 <p id="desc"> Regsiter for free to be part of our community </p>
  </section>
  
@@ -40,7 +39,7 @@
  
 <section class="tab">
 <img id="introImg" src="../Resources/Img/Personalize.png" alt="Register icon"/>
-<p id="title">3. <a id="home" href="ip2_sign_up.html" style="color:white;">Personalize </a></p>
+<p id="title">3. <a id="home" href="log_in.php" style="color:white;">Personalize </a></p>
 <p id="desc"> Personalize your own experience by creating your very own custom quizes </p>
  </section>
  
@@ -69,7 +68,7 @@
 <section>
 <p class="ConTitle">Customize your own adventure </p>
 <p class="ConDesc">Create your own custom quizez like never before </p>
-<p class="Link"><a id="home" style="color:white;" href="custom_quiz.html">Customize </a></p>
+<p class="Link"><a id="home" style="color:white;" href="log_in.php">Customize </a></p>
 </section>
 
 </div>
