@@ -53,6 +53,10 @@ if(isset($_POST["login_btn"])){
     $search_query = "SELECT * FROM users WHERE email = '$user_email'";
     $search_query_run =  mysqli_query($con, $search_query);
     $user = mysqli_fetch_assoc($search_query_run);
+    if($user['role']=='Admin'){
+      header("Location: add_quiz_admin.php");
+          exit;
+    }
     if((mysqli_num_rows($search_query_run) == 1) and (password_verify($user_password,$user['password']))){
       
         $_SESSION["user_id"] = $user['user_id']; 
