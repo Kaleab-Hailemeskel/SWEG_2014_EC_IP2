@@ -9,30 +9,26 @@
     <img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo" />
     <div class="listContainer">
         <ul id="headerList">
-            <li id="headerListPoints" class="rightBorder"> <a id="home" href="index.html" style="color:white;"> Home
+            <li id="headerListPoints" class="rightBorder"> <a id="home" href="index.php" style="color:white;"> Home
                 </a>
             </li>
-            <li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.php"
-                    style="color:white;">
-                    Practice </a> </li>
             <li id="headerListPoints"><a id="home" href="about_us.html" style="color:white;"> About Us </a> </li>
         </ul>
     </div>
 
     <div id="LogTab">
-        <span id="LogIn"><a id="home" href="log_in.html" style="color:white;">Log In</a> </span>
-        <span id="SignUp"> <a id="home" href="sign_up.html" style="color:white;"> Sign Up </a></span>
         <div>
 </header>
 
 <body>
     <main>
         <h1>Design Your Own Quiz!</h1>
-        <form action="add_quiz_admin.php" method="post">
+        <form action="add_quiz_admin.php" method="post" enctype="multipart/form-data">
             <label for="quiz_name">Quiz Name:</label>
             <input type="text" id="quiz_name" name="quiz_name" required><br>
             <label for="quiz_id">Quiz ID:</label>
             <input type="text" id="quiz_id" name="quiz_id" required>
+            <input type="file" id="quiz_image" name="quiz_image">
             <br><br>
 
             <h2>Questions</h2>
@@ -170,9 +166,10 @@ if ($conn->connect_error) {
 // Get form data
 $quizName = $_POST["quiz_name"];
 $quizId = $_POST["quiz_id"];
+
 $temps="SELECT * from admin_quizzes where quiz_id='$quizId' ";
 $result=mysqli_query($conn,$temps);
-if(mysqli_num_rows($result)==0){//used if the question id is new
+if(mysqli_num_rows($result)==0){
     $sqlInsertQuiz = "INSERT INTO admin_quizzes (quiz_name, quiz_id) VALUES (?, ?)";
 $stmt = $conn->prepare($sqlInsertQuiz);
 $stmt->bind_param("ss", $quizName, $quizId);
@@ -180,9 +177,22 @@ $stmt->execute();
 
 }
 
+if(!empty($_FILES['quiz_image']['name'])){
+$file=$_FILES['quiz_image']['name'];
+$fileT=$_FILES['quiz_image']['tmp_name'];
+$folder="Images/".$file;
+$sqlInsertimages="INSERT INTO image (quiz_id,image) values(?,?)";
+$stmt=$conn->prepare($sqlInsertimages);
+$stmt->bind_param("ss",$quizId,$file);
+$stmt->execute();
+move_uploaded_file($fileT,$folder);
+}
+
 
 $sqlInsertQuestion = "INSERT INTO admin_questions (question_text, quiz_id) VALUES (?, ?)";
 $sqlInsertOption = "INSERT INTO admin_options (question_id, question_1, question_2, question_3, question_4, correct_choice) VALUES (?, ?, ?, ?, ?, ?)";
+
+
 
 foreach ($_POST["question_text"] as $key => $value) {
   $questionText = $value;
