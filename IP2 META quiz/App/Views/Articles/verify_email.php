@@ -24,13 +24,15 @@ $u_pass=password_hash($user_password,PASSWORD_DEFAULT);
 
         if($register_query_run){
             $_SESSION['curr'] = "Registration successful";
-            echo "Successful Registration<br>";
+            header("Location: log_in.php");
+            exit;
         }
         unset($_SESSION['temp_user']);
     }
         else{
             $_SESSION['curr'] = "Registration went wrong";
-            echo "registration went wrong<br>";
+            header("Location: sign_up.php");
+            exit;
         }
 
     
