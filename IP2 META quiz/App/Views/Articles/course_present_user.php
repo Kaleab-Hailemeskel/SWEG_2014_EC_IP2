@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
  <head> <link href="../Resources/img/MQ_fav.png" type="image/png" rel="icon"><link rel="stylesheet" href="../Resources/css/hfStyle.css">
@@ -7,15 +10,15 @@
 <img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo"/>
 <div class="listContainer">
 <ul id="headerList"> 
-<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.html" style="color:white;"> Home </a> </li> 
-<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.html" style="color:white;"> Practice </a> </li>
+<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.php" style="color:white;"> Home </a> </li> 
+<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.php" style="color:white;"> Practice </a> </li>
 <li id="headerListPoints"><a id="home" href="about_us.html" style="color:white;"> About Us </a> </li>
 </ul>
 </div>
 
 <div id="LogTab">
-<span id="LogIn"><a id="home" href="log_in.html" style="color:white;">Log In</a> </span>
-<span id="SignUp"> <a id="home" href="sign_up.html" style="color:white;"> Sign Up </a></span>
+<span id="LogIn"><a id="home" href="log_in.php" style="color:white;">Log In</a> </span>
+<span id="SignUp"> <a id="home" href="sign_up.php" style="color:white;"> Sign Up </a></span>
 <div>
 </header>
 
@@ -41,8 +44,10 @@ if (!$conn) {
 
 
 $quiz_id = $_GET['quiz_id'];
+$_SESSION['quiz_id']=$quiz_id;
 $user_id=$_SESSION['user_id'];
-$sql_questions = "SELECT question_id, question_text FROM user_questions WHERE quiz_id = '$quiz_id' and user_id='$user_id'";
+
+$sql_questions = "SELECT question_id, question_text FROM user_questions WHERE quiz_id = '$quiz_id' ";
 
 
 $result_questions = mysqli_query($conn, $sql_questions);
@@ -63,12 +68,12 @@ if (mysqli_num_rows($result_questions) > 0) {
             while($option = mysqli_fetch_assoc($result_options)) {
                 for ($i = 1; $i <= 4; $i++) {
                     echo '<label class="radioWrapper">' . $option['question_'.$i];
-                    echo '<input type="radio" id="q' . $row['question_id'] . 'o' . $i . '" name="q' . $row['question_id'] . '">';
+                    echo '<input type="radio" id="q' . $row['question_id'] . 'o' . $i . '" name="q' . $row['question_id'] . '" value="' . $i . '">';
                     echo '<span class="checkmark"></span>';
                     echo '</label>';
              
                 }
-                echo 'div class="answers"></div>';
+                echo '<div class="answers"></div>';
             }
         }
         echo '</div></div>';
@@ -134,6 +139,7 @@ mysqli_close($conn);
  <span id="MetaCopy"> &copy; META 2024 </span>
  </div>
 </footer>
+
 <script src="Timer2.js">     
   
 
