@@ -8,24 +8,24 @@
 <img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo"/>
 <div class="listContainer">
 <ul id="headerList"> 
-<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.html" style="color:white;"> Home </a> </li> 
-<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.html" style="color:white;"> Practice </a> </li>
+<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.php" style="color:white;"> Home </a> </li> 
+<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.php" style="color:white;"> Practice </a> </li>
 <li id="headerListPoints"><a id="home" href="about_us.html" style="color:white;"> About Us </a> </li>
 </ul>
+
 </div>
 
 <div id="LogTab">
-<span id="LogIn"><a id="home" href="log_in.html" style="color:white;">Log In</a> </span>
-<span id="SignUp"> <a id="home" href="sign_up.html" style="color:white;"> Sign Up </a></span>
+<span id="LogIn"><a id="home" href="log_in.php" style="color:white;">Log In</a> </span>
+<span id="SignUp"> <a id="home" href="sign_up.php" style="color:white;"> Sign Up </a></span>
 <div>
 </header>
-<div id="timeleft">
-   
-</div>   
+
 <main>
 <div class="historyQuestionBody">
 <div class="subInfo"><?php echo $_GET['quiz_name']?></div>
 <div id="timer"></div>
+<div id="timeleft"></div>   
 <form method="" action="">
 <?php
 
