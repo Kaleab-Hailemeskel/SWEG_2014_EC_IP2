@@ -6,15 +6,16 @@
 <img id="Logo" src="../Resources/Img/MQ.png" alt="Meta Quiz Logo"/>
 <div class="listContainer">
 <ul id="headerList"> 
-<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.html" style="color:white;"> Home </a> </li> 
-<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.html" style="color:white;"> Practice </a> </li>
+<li id="headerListPoints" class="rightBorder"> <a id="home" href="index.php" style="color:white;"> Home </a> </li> 
+<li id="headerListPoints" class="rightBorder"><a id="home" href="course_selection.php" style="color:white;"> Practice </a> </li>
 <li id="headerListPoints"><a id="home" href="about_us.html" style="color:white;"> About Us </a> </li>
 </ul>
+
 </div>
 
 <div id="LogTab">
-<span id="LogIn"><a id="home" href="log_in.html" style="color:white;">Log In</a> </span>
-<span id="SignUp"> <a id="home" href="sign_up.html"style="color:white;"> Sign Up </a></span>
+<span id="LogIn"><a id="home" href="log_in.php" style="color:white;">Log In</a> </span>
+<span id="SignUp"> <a id="home" href="sign_up.php" style="color:white;"> Sign Up </a></span>
 <div>
 </header>
 <body>
@@ -45,7 +46,8 @@ $connection=mysqli_connect($servername,$username,$password,$dbname);
 if(!$connection){
     die("connection failed: ".mysqli_connect_error());
 }
-$query="Select quiz_id,quiz_name from admin_quizzes";
+$query="Select admin_quizzes.quiz_id,admin_quizzes.quiz_name,image.image from admin_quizzes Left JOIN image ON admin_quizzes.quiz_id=image.quiz_id";
+
 $result=mysqli_query($connection,$query);
 $quizzes=array();
 if(mysqli_num_rows($result)>0){
@@ -60,7 +62,7 @@ mysqli_close($connection);
 	<?php foreach($quizzes as $quiz):?>
 <div class="Content">
     <div class="rounded-box">
-        <img src="../Resources/Img/science.jpg" alt="Science Image">
+        <img src="<?php echo $quiz['image'];?>" alt="no Image">
         <div class="button-container">
         <a id="courseLinks" href="course_present.php?quiz_id=<?php echo urlencode($quiz['quiz_id']);?>&quiz_name=<?php echo urlencode($quiz['quiz_name'])?>">
     <button class = "btn-course"><?php echo $quiz['quiz_name']?></button>
