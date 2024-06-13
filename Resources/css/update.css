@@ -95,7 +95,22 @@ button#final{
 	font-size:20px;
 	
 }
-
+.btn--login {
+    width: 250px;
+    height:40px;
+    border-radius:25px;
+    border: none;
+  background-color: #d8114a;
+  font-size: 130%;
+    font-weight: bold;
+  color:white;
+    display: block;
+    margin: 0 auto;
+    font-family: Campfire;
+    margin-bottom: 20px;
+	margin-left: 55px;
+  
+  }
 .Question{padding-bottom:15px;}
 .sub{padding-bottom:15px;}
 
